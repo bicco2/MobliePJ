@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:background= "@drawable/addrstoretitle"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="가게 등록"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+
+    <!-- 스크롤 뷰 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- 가게 위치 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 위치"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/storeAdr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/addrtext"
+                    android:gravity="center"
+                    android:text="주소"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />aa
+            </LinearLayout>
+
+
+            <!-- 가게 이름  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 이름"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/storeNameCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="0 / 20"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/storeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/storename"
+                    android:gravity="center"
+                    android:hint="가게 이름을 입력하세요"
+                    android:maxLength="20"
+                    android:textColor="#000000"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
+            <!-- 가게 메뉴  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 메뉴"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/storeMenuCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="0 / 30"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/storeMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/storename"
+                    android:gravity="center"
+                    android:hint="가게 메뉴를 입력하세요"
+                    android:maxLength="30"
+                    android:textColor="#000000"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
+
+            <!-- 가게 설명 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 설명"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/storeInfoCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text=" 0 / 50"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/storeInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/storename"
+                    android:gravity="center"
+                    android:hint="간단한 설명을 입력하세요"
+                    android:maxLength="50"
+                    android:textColor="#000000"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
+            <!-- 가게 사진 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 사진"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:id="@+id/storeImage"
+                            android:background="@drawable/storeimageframe"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <ImageButton
+                            android:id="@+id/storeImageAdd"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="top|right"
+                            android:background="@drawable/imageaddbutton"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 가게 유형 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="가게 유형"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/storeType1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:checked="true"
+                            android:text="건물     "
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:id="@+id/storeType2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:text="포장마차     "
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 결제 방식 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#DBDBDB"
+                    android:gravity="center"
+                    android:text="결제 방식"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/storePayType1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:checked="true"
+                            android:text="카드     "
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:id="@+id/storePayType2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:text="현금     "
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:id="@+id/storePayType3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:text="카드, 현금     "
+                            android:textColor="#000000"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+    <!-- 가게 휴무일 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#DBDBDB"
+            android:gravity="center"
+            android:text="휴무일"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/storeClosedSun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:checked="true"
+                    android:text="일"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedMon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="월"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedTue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="화"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedWed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="수"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedThu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="목"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedFri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="금"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedSat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:text="토"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/storeClosedNone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
+
+
+
+
+    <!-- 취소 버튼, 등록 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="취소"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/addCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="등록"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="TextView" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="TextView" />-->
+</LinearLayout>
+
+
+
+

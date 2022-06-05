@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "540421980158",
+    "project_id": "mobileproject-3acbd",
+    "storage_bucket": "mobileproject-3acbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540421980158:android:89db5df5d95462313d0aaf",
+        "android_client_info": {
+          "package_name": "com.tuk.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540421980158-gdu46re9baeqju2m4kf6vpe9p23cqmia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPK8kyxIEzQyjEfjOxmhfYq6z2P5SKYw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540421980158-gdu46re9baeqju2m4kf6vpe9p23cqmia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

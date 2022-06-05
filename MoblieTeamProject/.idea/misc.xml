@@ -3,11 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/addrstoretitle.xml" value="0.227" />
+        <entry key="app/src/main/res/drawable/favorite_border.xml" value="0.4825" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.216" />
+        <entry key="app/src/main/res/drawable/layout_background.xml" value="0.227" />
+        <entry key="app/src/main/res/drawable/search.xml" value="0.237" />
+        <entry key="app/src/main/res/drawable/storeimageframe.xml" value="0.146" />
+        <entry key="app/src/main/res/layout/activity_create.xml" value="0.1621376811594203" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/popup_marketinfo.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2260528564453125" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.17567567567567569" />
+        <entry key="app/src/main/res/layout/popup_marketinfo.xml" value="0.4826904296875001" />
+        <entry key="app/src/main/res/layout/test.xml" value="0.45" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

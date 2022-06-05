@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MoblieTeamProject</string>
+
+    <string name="please_input_search_keyword">구, 동 , 건물명, 역 등으로 검색</string>
+    <string name="search">검색</string>
+    <string name="empty_result_text">검색 결과가 없습니다.</string>
 </resources>

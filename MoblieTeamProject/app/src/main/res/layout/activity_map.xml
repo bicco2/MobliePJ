@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#B4D4F1"
+        android:gravity="center"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btnToResearch"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:text="검색"
+            android:textSize="15dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/current_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="320dp"
+            android:backgroundTint="#FFF4F1EF"
+            android:src="@drawable/ic_baseline_my_location_24"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set_location"
+            app:tint="#2A7BDC" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#2A7BDC"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/set_location"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="468dp"
+            android:singleLine="true"
+            android:text="설정한 위치 주소"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/current_location_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/marker_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/flo_btn_create"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_main"
+            app:layout_constraintEnd_toEndOf="@+id/fab_main"
+            app:layout_constraintStart_toStartOf="@+id/fab_main"
+            app:layout_constraintTop_toTopOf="@+id/fab_main" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/marker_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/flo_btn_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_main"
+            app:layout_constraintEnd_toEndOf="@+id/fab_main"
+            app:layout_constraintStart_toStartOf="@+id/fab_main"
+            app:layout_constraintTop_toTopOf="@+id/fab_main" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/marker_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/flo_btn_register"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_main"
+            app:layout_constraintEnd_toEndOf="@+id/fab_main"
+            app:layout_constraintStart_toStartOf="@+id/fab_main"
+            app:layout_constraintTop_toTopOf="@+id/fab_main" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/marker_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/flo_btn_show"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_main"
+            app:layout_constraintEnd_toEndOf="@+id/fab_main"
+            app:layout_constraintStart_toStartOf="@+id/fab_main"
+            app:layout_constraintTop_toTopOf="@+id/fab_main" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/flo_btn_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,43 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical"
-             android:background="@color/teal_200">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="520dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/layout_background"
+    android:elevation="3dp"
+    >
 
-    <TextView
-        android:id="@+id/Title_tv1"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp">
+
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/close"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:layout_gravity="center"
+        >
 
-    <TextView
-        android:id="@+id/Title_tv2"
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:elevation="2dp"
+            android:background="@drawable/layout_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/store_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="트 랩"
+                android:textColor="#111111"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/store_title_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="230M"
+                android:textColor="#3C58E1"
+                android:textSize="10dp">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/store_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" 산기대 주변 분위기 있는 술집"
+            android:textColor="#777777" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/Title_tv3"
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_gravity="center"
+        >
 
-    <TextView
-        android:id="@+id/Title_tv4"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/icon_clock"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="33dp"
+                android:background="@drawable/time"
+                app:layout_constraintBottom_toTopOf="@+id/icon_money"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/icon_clock"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@id/icon_clock"
+                android:text="영업일"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/day_text"
+                app:layout_constraintStart_toEndOf="@+id/icon_clock">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/icon_money"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/icon_clock"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/money"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_clock">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="목요일 휴무"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/day">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/store_payType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="카드"
+                android:textColor="#4764F1"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pay">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/store_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="매장"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kind">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="결제방식"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/icon_money"
+                app:layout_constraintTop_toBottomOf="@+id/day_text">
+
+            </TextView>
+
+            <TextView
+
+                android:id="@+id/kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="가게 형태"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/icon_kind"
+                app:layout_constraintTop_toBottomOf="@+id/store_payType">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/icon_kind"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_money">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:layout_gravity="center"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
+        <TextView
+            android:layout_width="23dp"
+            android:layout_height="20dp"
+            android:text="메뉴"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            >
+        </TextView>
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:background="@drawable/layout_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/menu_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text=" º   떡볶이"
+                        android:textColor="#000000"
+                        android:textSize="10dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="가게사진"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/layout_background_blue">
+
+            <ImageView
+                android:id="@+id/store_picture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/layout_background_blue">
+
+
+            </ImageView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
+    >
 
+        //버튼 클릭시 -> 하트 채워짐||버튼 클릭시 -> 빈하트,즐겨찾기 해제
+        <Button
+            android:id="@+id/favorite_check"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginBottom="11dp"
+            android:clickable="true"
+            app:backgroundTint="#3C58E1"
+            android:background="@drawable/favorite_border"
+            app:tint="#FFFFFF"/>
+    </LinearLayout>
 </LinearLayout>
