@@ -3,16 +3,17 @@ package com.tuk.myapp
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.Window
-import android.widget.Button
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.getSystemService
 import com.bumptech.glide.Glide
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -25,6 +26,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.popup_marketinfo.view.*
 
 
@@ -37,7 +39,16 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
     lateinit var btn_market_register : FloatingActionButton
     lateinit var btn_market_show : FloatingActionButton
     lateinit var fab_main : FloatingActionButton
+    lateinit var fv_button: FloatingActionButton
     lateinit var btnToResearch : Button
+
+    private lateinit var listView: ListView
+    private lateinit var editTextName: EditText
+    private lateinit var editTextNumber: EditText
+    private lateinit var buttonAdd: Button
+    private var dataArrayList: ArrayList<String>? = null
+    private var adapter: ArrayAdapter<String>? = null
+    private lateinit var prefe1: SharedPreferences
 
 
     var db: FirebaseFirestore = FirebaseFirestore.getInstance()
@@ -56,6 +67,8 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
 
     //인텐트
     lateinit var createIntent: Intent
+    lateinit var fvIntent: Intent
+
 
     var current_position : LatLng? = null
 
@@ -79,8 +92,10 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
         btn_market_show = findViewById(R.id.marker_show)
 
         fab_main = findViewById(R.id.fab_main)
+        fv_button=findViewById(R.id.fab_fv)
         btnToResearch = findViewById(R.id.btnToResearch)
 
+//        editTextName = findViewById(R.id.edtTxt_addName_actvtMain)
 
         //마커(가게 정보리스트)저장 함수
         saveMarkerData()
@@ -91,6 +106,12 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
         fab_main.setOnClickListener {
             toggleFab()
         }
+        fv_button.setOnClickListener {
+            fvIntent= Intent(this,MainActivity3::class.java)
+            startActivity(fvIntent)
+
+        }
+
 
         // 플로팅 버튼 클릭 이벤트 - 마커 생성
         btn_market_create.setOnClickListener {
@@ -217,8 +238,11 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
         alertDialog.window!!.setLayout(800,1400)
 
         viewPopup.favorite_check.setOnClickListener {
-
-            Toast.makeText(this, viewPopup.store_information.text.toString() ,Toast.LENGTH_SHORT).show()
+            fvIntent= Intent(this,MainActivity3::class.java)
+            fvIntent.putExtra("title",viewPopup.store_title_name.text.toString())
+            fvIntent.putExtra("content",viewPopup.store_information.text.toString())
+            startActivity(fvIntent)
+//            Toast.makeText(this, "저장되었습니다.",Toast.LENGTH_SHORT).show()
         }
 
         viewPopup.close_button.setOnClickListener {

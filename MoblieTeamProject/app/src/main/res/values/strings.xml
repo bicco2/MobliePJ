@@ -4,4 +4,8 @@
     <string name="please_input_search_keyword">구, 동 , 건물명, 역 등으로 검색</string>
     <string name="search">검색</string>
     <string name="empty_result_text">검색 결과가 없습니다.</string>
+    <string name="내용">내용</string>
+    <string name="이름">이름</string>
+    <string name="추가하기">추가하기</string>
+    <string name="삭제_하려면_길게_누르세요">삭제 하려면 길게 누르세요</string>
 </resources>
