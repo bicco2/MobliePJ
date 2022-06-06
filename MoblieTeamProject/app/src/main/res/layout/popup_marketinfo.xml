@@ -312,7 +312,7 @@
         android:layout_height="wrap_content"
     >
 
-        //버튼 클릭시 -> 하트 채워짐||버튼 클릭시 -> 빈하트,즐겨찾기 해제
+
         <Button
             android:id="@+id/favorite_check"
             android:layout_width="30dp"

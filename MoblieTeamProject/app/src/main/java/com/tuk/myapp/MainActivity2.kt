@@ -216,6 +216,11 @@ class MainActivity2 : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCl
         alertDialog.show()
         alertDialog.window!!.setLayout(800,1400)
 
+        viewPopup.favorite_check.setOnClickListener {
+
+            Toast.makeText(this, viewPopup.store_information.text.toString() ,Toast.LENGTH_SHORT).show()
+        }
+
         viewPopup.close_button.setOnClickListener {
             alertDialog.dismiss()
         }
