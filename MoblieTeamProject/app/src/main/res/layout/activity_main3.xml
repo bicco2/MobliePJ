@@ -3,36 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/txt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt1"/>
+        android:orientation="horizontal"
+        android:background="#B4D4F1"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnToResearch"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:text="내 즐겨찾기 리스트"
+            android:textSize="15dp"
+            android:clickable="false"
+            android:textColor="#000000"/>
 
 
-
-
+    </LinearLayout>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/삭제_하려면_길게_누르세요" />
 
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="5dp"
+        android:id="@+id/txt1"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
+
+
     <ListView
+        android:layout_margin="20dp"
         android:id="@+id/listVw_actvMain"
         android:layout_width="match_parent"
+        android:background="#EFEDED"
         android:layout_height="wrap_content"
+        android:divider="#ffffff"
+        android:dividerHeight="20dp"
         />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </LinearLayout>

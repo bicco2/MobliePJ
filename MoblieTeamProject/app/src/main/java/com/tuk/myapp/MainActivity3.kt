@@ -22,6 +22,7 @@ class MainActivity3 : AppCompatActivity() {
         setContentView(R.layout.activity_main3)
         declararVariaveis()
         deleteInformation()
+        addInformations()
         if(intent.hasExtra("content"))
         {
             ttxt1.text=intent.getStringExtra("content")
@@ -50,13 +51,13 @@ class MainActivity3 : AppCompatActivity() {
 
         if (ttxt.text.toString() != "" && ttxt1.text.toString() != ""){
 
-            dataArrayList!!.add(ttxt.text.toString() + " \n " + ttxt1.text.toString())
+            dataArrayList!!.add(ttxt.text.toString() + "\n메뉴 : " + ttxt1.text.toString())
             adapter!!.notifyDataSetChanged()
             val elemento = prefe1.edit()
             elemento.putString(ttxt.text.toString(), ttxt1.text.toString())
             elemento.apply()
-            ttxt.setText("")
-            ttxt1.setText("")
+//            ttxt.setText("")
+//            ttxt1.setText("")
         }
     }
 
@@ -93,7 +94,7 @@ class MainActivity3 : AppCompatActivity() {
         prefe1 = getSharedPreferences("list", MODE_PRIVATE)
         val claves = prefe1.all
         for ((key, value) in claves) {
-            dataArrayList!!.add(key + " \n " + value.toString())
+            dataArrayList!!.add(key + "\n메뉴 : " + value.toString())
 
         }
     }
